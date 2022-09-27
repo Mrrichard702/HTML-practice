@@ -8,10 +8,34 @@
 </head>
 <body>
     <h1>Videogame-reccomendations</h1>
+    <!--the form tag is used to create a container where all inputs necassery for a form a held.
+    need type, name, and id if you want the user to fill out cretain areas of the form
+
+     names gives some descriptive information about what the form will be used for.
+    id allows us to reference this form in fieldsets and other ares of code
+    method has two typical values:get and post. get is used in forms that don't ask for personal info(search bars, etc.).
+    Post is used for forms that ask for personal info(login and signup pages, etc.).
+-->
     <form name="videogame suggestions" id="game recommendations" method="get">
         <label for="Some cool videogames">what videogames have you enjoyed playing [required]:</label>
-        <!--need type, name, and id-->
     <input type="text" name="games" id="recommendations" required/>
+    <br/>
+    <label for="email-address">Please Enter your E-mail Address: </label>
+    <input type="email" name="email" id="email-address" minlength="6" maxlength="40"/>
+    <br/>
+    <label for="favcolor">Select your favorite color:</label>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+    <!--allows for a color bar to be used with rgb incorperated-->
+    <br/>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday">
+    <br/>
+    <!--this is an email input. it requires type, name, and id.
+     
+    opyional attributes are minlength and maxlength they are used for specifying
+     the maximum length of characters and the minimun length of characters-->
+     <!--<label for="password"please enter your Password:</label>-->
+    <!--this is a password input. type="password",name, and id are all required attributes.-->
 
     <label for="password"> Please enter your password:</label>
     <input type="password" name="userPassword" id="password">
