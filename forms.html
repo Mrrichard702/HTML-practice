@@ -15,7 +15,7 @@
     id allows us to reference this form in fieldsets and other ares of code
     method has two typical values:get and post. get is used in forms that don't ask for personal info(search bars, etc.).
     Post is used for forms that ask for personal info(login and signup pages, etc.).
--->
+    -->
     <form name="videogame suggestions" id="game recommendations" method="get">
         <label for="Some cool videogames">what videogames have you enjoyed playing [required]:</label>
     <input type="text" name="games" id="recommendations" required/>
@@ -26,10 +26,22 @@
     <label for="favcolor">Select your favorite color:</label>
     <input type="color" id="favcolor" name="favcolor" value="#ff0000">
     <br/>
+    <!--A fieldset is an area in your form where you put inputs that are more related to each other then they are related to other inputs
+        in the form(i.e, a list of travel items is more related to each other then the country the person is reccomending).-->
     <fieldset form="color" name="color choice">
         <legend>
-            what is your favourite object in that color:
-        </legend>
+            <!--A legend describes how the inputs inside the fieldset are all related-->
+            what do you enjoy about a controller:</legend>
+            <!--This is a checkbox input. Note, this is where the input typically comes before the label.
+            
+                type="checkbox", name, and id are all required. value is also required and provides its value to the server if the user 
+                checks that box and submits the form in this case, what would be passed to the server is waterBottle=bottle.-->
+            <input type="checkbox" name="feel" id="touch" value="touch" />
+            <label for="touch">Feel</label>
+            <br />
+            <input type="checkbox" name="noise" id="sound" value="sound" />
+            <label for="sound">clicks and clacks</label>
+
     </fieldset>
     <br/>
     <label for="appstore">Choose a favourite webstore:</label>
@@ -40,7 +52,11 @@
   <option value="playatation">playstation</option>
   <option value="google play store">google play store</option>
 </select>
+<!--A text area input allows a user to enter multiple lines of information for a form
 
+    name and id are required attributes.
+    highly reccomended attributes are rows and cols. rows defines the number of lines a user can type before a scrollbar appears.
+    cos defines the character across a user can type before their input goes to the next line. -->
     <!--allows for a color bar to be used with rgb incorperated-->
     <br/>
     <label for="birthday">Birthday:</label>
@@ -58,10 +74,43 @@
               rows="5"     cols="33">
     </textarea>
     <br/>
+    <br/>
+    <label for="videogames">what videogame series do you like playing on cretain company consoles</label>
+    <select name="videogameselect" id="country">
+    <!--optgroups let you group the options inside your select input.
+        label is required so that the optgroup displays what the category is for the options inside the group.-->
+
+        <!--the option tag is the actual option a user-->
+     <optgroup label="nintendo">
+        <option value="Legend of Zelda">Legend of Zelda</option>
+        <option value="Mario">Mario</option>
+     </optgroup>
+     <optgroup label="Xbox">
+        <option value="Halo">Halo</option>
+        <option value="Banjo-Kazooie">Banjo-Kazooie</option>
+        </select>
+        <br/>
+        <!--this is a radio button input, which are good when you want the user 
+        to select one option from a list options.
+
+        name,id, and value are all required attributes. the value should represent the choice the user has selected. Note,
+        most importantly the name attribute for each related radio button should be exactly th same.-->
+        <fieldset form="videogames">
+            <legend>what video game franchisce do yo like the most</legend>
+            <input type="radio" name="videogame" id="Halo" value="Halo"/>
+            <label for="Halo">Halo</label>
+            <input type="radio" name="videogame" id="Banjo-Kazooie" value="Banjo-Kazooie"/>
+            <label for="Banjo-Kazooie">Banjo-Kazooie</label>
+            <input type="radio" name="videogame" id="Legend of Zelda" value="Legend of Zelda"/>
+            <label for="Legend of Zelda">Legend of Zelda</label>
+            <input type="radio" name="videogame" id="Mario" value="Mario"/>
+            <label for="Mario">Mario</label>
+        </fieldset>
+        <br />
     <!--this is an email input. it requires type, name, and id.
-     
-    opyional attributes are minlength and maxlength they are used for specifying
+    optional attributes are minlength and maxlength they are used for specifying
      the maximum length of characters and the minimun length of characters-->
+
      <!--<label for="password"please enter your Password:</label>-->
     <!--this is a password input. type="password",name, and id are all required attributes.-->
 
@@ -79,5 +128,6 @@
     <br/>
     <a href="iframes-tables-and-lists.html">a web page about iframes and Lists</a>
     <a href="forms.html">A webapage about forms</a>
+    
 </body>
 </html>
