@@ -96,7 +96,7 @@
         name,id, and value are all required attributes. the value should represent the choice the user has selected. Note,
         most importantly the name attribute for each related radio button should be exactly th same.-->
         <fieldset form="videogames">
-            <legend>what video game franchisce do yo like the most</legend>
+            <legend>what video game franchisce do you like the most</legend>
             <input type="radio" name="videogame" id="Halo" value="Halo"/>
             <label for="Halo">Halo</label>
             <input type="radio" name="videogame" id="Banjo-Kazooie" value="Banjo-Kazooie"/>
@@ -107,6 +107,19 @@
             <label for="Mario">Mario</label>
         </fieldset>
         <br />
+        <!--
+            this is an example of a reset button input. type="reset", name and id are all required
+            value is an optional attribute for if you want to change the default text on the button
+        -->
+        <input type="reset" name="clearform" id="clear" value="Click This to Clear All Inputs">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <input type="submit" name="submut button" id="submit" value="Click this to submit your suggestion" />
+        <!--this is an example of a submit button:this input needs to be inside the form tag
+            type="submit", name ,and id are all required. value is optional fo the same reason as reset-->
+        <br/>
     <!--this is an email input. it requires type, name, and id.
     optional attributes are minlength and maxlength they are used for specifying
      the maximum length of characters and the minimun length of characters-->
