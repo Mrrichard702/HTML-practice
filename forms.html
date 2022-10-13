@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <header>
+      <h1>an a aforment</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="Headings and paragraphs.html">
+              A link to Headings and paragraphs
+            </a>
+          </li>
+          <li><a href="links-and-images.html"></a></li>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="forms.html">A webapage about forms</a></li>
+          <li>
+            <a href="iframes-tables-and-lists.html">iframes tables and Lists</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <title>Forms</title>
   </head>
   <body>
-    <h1>an a aforment</h1>
     <!--the form tag is used to create a container where all inputs necassery for a form a held.
     need type, name, and id if you want the user to fill out cretain areas of the form
 
@@ -16,179 +33,162 @@
     method has two typical values:get and post. get is used in forms that don't ask for personal info(search bars, etc.).
     Post is used for forms that ask for personal info(login and signup pages, etc.).
     -->
-    <form name="videogame suggestions" id="game recommendations" method="get">
-      <label for="Some cool videogames"
-        >what videogames have you enjoyed playing [required]:</label
-      >
-      <input type="text" name="games" id="recommendations" required />
-      <br />
-      <label for="email-address">Please Enter your E-mail Address: </label>
-      <input
-        type="email"
-        name="email"
-        id="email-address"
-        minlength="6"
-        maxlength="40"
-      />
-      <br />
-      <label for="favcolor">Select your favorite color:</label>
-      <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
-      <br />
-      <!--A fieldset is an area in your form where you put inputs that are more related to each other then they are related to other inputs
+    <main>
+      <form name="videogame suggestions" id="game recommendations" method="get">
+        <label for="Some cool videogames"
+          >what videogames have you enjoyed playing [required]:</label
+        >
+        <input type="text" name="games" id="recommendations" required />
+        <br />
+        <label for="email-address">Please Enter your E-mail Address: </label>
+        <input
+          type="email"
+          name="email"
+          id="email-address"
+          minlength="6"
+          maxlength="40" />
+        <br />
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+        <br />
+        <!--A fieldset is an area in your form where you put inputs that are more related to each other then they are related to other inputs
         in the form(i.e, a list of travel items is more related to each other then the country the person is reccomending).-->
-      <fieldset form="color" name="color choice">
-        <legend>
-          <!--A legend describes how the inputs inside the fieldset are all related-->
-          what do you enjoy about a controller:
-        </legend>
-        <!--This is a checkbox input. Note, this is where the input typically comes before the label.
+        <fieldset form="color" name="color choice">
+          <legend>
+            <!--A legend describes how the inputs inside the fieldset are all related-->
+            what do you enjoy about a controller:
+          </legend>
+          <!--This is a checkbox input. Note, this is where the input typically comes before the label.
             
                 type="checkbox", name, and id are all required. value is also required and provides its value to the server if the user 
                 checks that box and submits the form in this case, what would be passed to the server is waterBottle=bottle.-->
-        <input type="checkbox" name="feel" id="touch" value="touch" />
-        <label for="touch">Feel</label>
+          <input type="checkbox" name="feel" id="touch" value="touch" />
+          <label for="touch">Feel</label>
+          <br />
+          <input type="checkbox" name="noise" id="sound" value="sound" />
+          <label for="sound">clicks and clacks</label>
+        </fieldset>
         <br />
-        <input type="checkbox" name="noise" id="sound" value="sound" />
-        <label for="sound">clicks and clacks</label>
-      </fieldset>
-      <br />
-      <label for="appstore">Choose a favourite webstore:</label>
+        <label for="appstore">Choose a favourite webstore:</label>
 
-      <select name="appstore" id="appstore">
-        <option value="steam">steam</option>
-        <option value="xbox">xbox</option>
-        <option value="playatation">playstation</option>
-        <option value="google play store">google play store</option>
-      </select>
-      <!--A text area input allows a user to enter multiple lines of information for a form
+        <select name="appstore" id="appstore">
+          <option value="steam">steam</option>
+          <option value="xbox">xbox</option>
+          <option value="playatation">playstation</option>
+          <option value="google play store">google play store</option>
+        </select>
+        <!--A text area input allows a user to enter multiple lines of information for a form
 
     name and id are required attributes.
     highly reccomended attributes are rows and cols. rows defines the number of lines a user can type before a scrollbar appears.
     cos defines the character across a user can type before their input goes to the next line. -->
-      <!--allows for a color bar to be used with rgb incorperated-->
-      <br />
-      <label for="birthday">Birthday:</label>
-      <input type="date" id="birthday" name="birthday" />
-      <br />
-      <input
-        type="radio"
-        id="1st name option"
-        name="fav_name"
-        value="Jonathon"
-      />
-      <label for="name">Jonathon</label><br />
-      <input
-        type="radio"
-        id="2nd name option"
-        name="fav_name"
-        value="gregory"
-      />
-      <label for="name">gregory</label><br />
-      <input type="radio" id="3rd name option" name="fav_name" value="ben" />
-      <label for="name">ben</label>
-      <br />
-      <label for="Story"
-        >tell us a pop that happened to you while playing a videogame:</label
-      >
-      <textarea id="story" name="story" rows="5" cols="33"> </textarea>
-      <br />
-      <br />
-      <label for="videogames"
-        >what videogame series do you like playing on cretain company
-        consoles</label
-      >
-      <select name="videogameselect" id="country">
-        <!--optgroups let you group the options inside your select input.
+        <!--allows for a color bar to be used with rgb incorperated-->
+        <br />
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" />
+        <br />
+        <input
+          type="radio"
+          id="1st name option"
+          name="fav_name"
+          value="Jonathon" />
+        <label for="name">Jonathon</label>
+        <br />
+        <input
+          type="radio"
+          id="2nd name option"
+          name="fav_name"
+          value="gregory" />
+        <label for="name">gregory</label><br />
+        <input type="radio" id="3rd name option" name="fav_name" value="ben" />
+        <label for="name">ben</label>
+        <br />
+        <label for="Story">
+          tell us a pop that happened to you while playing a videogame:
+        </label>
+        <textarea id="story" name="story" rows="5" cols="33"> </textarea>
+        <br />
+        <br />
+        <label for="videogames">
+          what videogame series do you like playing on cretain company consoles
+        </label>
+        <select name="videogameselect" id="country">
+          <!--optgroups let you group the options inside your select input.
         label is required so that the optgroup displays what the category is for the options inside the group.-->
+          <!--the option tag is the actual option a user-->
+          <optgroup label="nintendo">
+            <option value="Legend of Zelda">Legend of Zelda</option>
+            <option value="Mario">Mario</option>
+          </optgroup>
+          <optgroup label="Xbox">
+            <option value="Halo">Halo</option>
+            <option value="Banjo-Kazooie">Banjo-Kazooie</option>
+          </optgroup>
+        </select>
 
-        <!--the option tag is the actual option a user-->
-        <optgroup label="nintendo">
-          <option value="Legend of Zelda">Legend of Zelda</option>
-          <option value="Mario">Mario</option>
-        </optgroup>
-        <optgroup label="Xbox">
-          <option value="Halo">Halo</option>
-          <option value="Banjo-Kazooie">Banjo-Kazooie</option>
-        </optgroup>
-      </select>
-
-      <br />
-      <!--
+        <br />
+        <!--
         this is a radio button input, which are good when you want the user 
         to select one option from a list options.
-
         name,id, and value are all required attributes. the value should represent the choice the user has selected. Note,
         most importantly the name attribute for each related radio button should be exactly th same.
         -->
-      <fieldset form="videogames">
-        <legend>what video game franchisce do you like the most</legend>
-        <input type="radio" name="videogame" id="Halo" value="Halo" />
-        <label for="Halo">Halo</label>
-        <input
-          type="radio"
-          name="videogame"
-          id="Banjo-Kazooie"
-          value="Banjo-Kazooie"
-        />
-        <label for="Banjo-Kazooie">Banjo-Kazooie</label>
-        <input
-          type="radio"
-          name="videogame"
-          id="Legend of Zelda"
-          value="Legend of Zelda"
-        />
-        <label for="Legend of Zelda">Legend of Zelda</label>
-        <input type="radio" name="videogame" id="Mario" value="Mario" />
-        <label for="Mario">Mario</label>
-      </fieldset>
-      <br />
-      <!--
+        <fieldset form="videogames">
+          <legend>what video game franchisce do you like the most</legend>
+          <input type="radio" name="videogame" id="Halo" value="Halo" />
+          <label for="Halo">Halo</label>
+          <input
+            type="radio"
+            name="videogame"
+            id="Banjo-Kazooie"
+            value="Banjo-Kazooie" />
+          <label for="Banjo-Kazooie">Banjo-Kazooie</label>
+          <input
+            type="radio"
+            name="videogame"
+            id="Legend of Zelda"
+            value="Legend of Zelda" />
+          <label for="Legend of Zelda">Legend of Zelda</label>
+          <input type="radio" name="videogame" id="Mario" value="Mario" />
+          <label for="Mario">Mario</label>
+        </fieldset>
+        <br />
+        <!--
             this is an example of a reset button input. type="reset", name and id are all required
             value is an optional attribute for if you want to change the default text on the button
         -->
-      <input
-        type="reset"
-        name="clearform"
-        id="clear"
-        value="Click This to Clear All Inputs"
-      />
-      <br />
-      <br />
-      <br />
-      <br />
-      <input
-        type="submit"
-        name="submut button"
-        id="submit"
-        value="Click this to submit your suggestion"
-      />
-      <!--this is an example of a submit button:this input needs to be inside the form tag
+        <input
+          type="reset"
+          name="clearform"
+          id="clear"
+          value="Click This to Clear All Inputs" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <input
+          type="submit"
+          name="submut button"
+          id="submit"
+          value="Click this to submit your suggestion" />
+        <!--this is an example of a submit button:this input needs to be inside the form tag
             type="submit", name ,and id are all required. value is optional fo the same reason as reset-->
-      <br />
-      <!--this is an email input. it requires type, name, and id.
+        <br />
+        <!--this is an email input. it requires type, name, and id.
     optional attributes are minlength and maxlength they are used for specifying
      the maximum length of characters and the minimun length of characters-->
 
-      <!--<label for="password"please enter your Password:</label>-->
-      <!--this is a password input. type="password",name, and id are all required attributes.-->
+        <!--<label for="password"please enter your Password:</label>-->
+        <!--this is a password input. type="password",name, and id are all required attributes.-->
 
-      <label for="password"> Please enter your password:</label>
-      <input type="password" name="userPassword" id="password" />
-    </form>
-    <a href="Headings and paragraphs.html">A link to Headings and paragraphs</a>
-    <br />
-    <br />
-    <a href="links-and-images.html"
-      >A link to a webpage about Links and Images</a
-    >
-    <br />
-    <br />
-    <a href="index.html">Home Page</a>
-    <br />
-    <br />
-    <a href="iframes-tables-and-lists.html"
-      >a web page about iframes and Lists</a
-    >
-    <a href="forms.html">A webapage about forms</a>
+        <label for="password"> Please enter your password:</label>
+        <input type="password" name="userPassword" id="password" />
+      </form>
+    </main>
+    <footer>
+      <p>&#169;2022 Evan Ross</p>
+      <!--&#nbsp; is an entity. entities are used to display special characters on a website
+        Entities can se names, such as &#nbsp; or numbers, such as &#169; (dopyright symbol).-->
+    </footer>
   </body>
 </html>
